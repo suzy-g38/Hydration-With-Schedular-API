@@ -1,5 +1,5 @@
 import React from "react";
-import HeavyComponent from "./HeavyComponent";
+import HeavyComponent from "./components/HeavyComponent";
 
 const App = () => {
   return (

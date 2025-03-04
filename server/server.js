@@ -4,14 +4,19 @@ import React from 'react';
 import express from 'express';
 import browserify from 'browserify';
 import babelify from 'babelify';
-import App from './components/App';
+import App from '../src/App';
 import { renderToString } from "react-dom/server";
+import path from 'path';
 
 const app = express();
 const port = 3000;
 
 app.get('/bundle.js', (req, res) => {
-  browserify('./client.js', { debug: true }).transform(babelify).bundle().pipe(res);
+  browserify(path.resolve(__dirname, '../src/client.js'), { debug: true })
+  .transform(babelify)
+  .bundle()
+  .pipe(res);
+
 });
 
 
@@ -21,7 +26,7 @@ app.get("/", (req, res) => {
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Hydration Blocking Example</title>
+        <title>Solve Hydration Blocking With Browser Scheduling API</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body>

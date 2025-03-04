@@ -1,6 +1,6 @@
 import React from "react";
 import { hydrateRoot } from "react-dom/client";
-import App from "./components/App";
+import App from "./App";
 
 // Ensure browser supports Scheduler API
 if (window.scheduler?.postTask) {
