@@ -35,6 +35,21 @@ The app should now be running at `http://localhost:3000/`
 ## Demo & Benchmarks
 - This repo includes flame charts to visualize **hydration performance before and after applying the Browser Scheduling API**.
 - Use **React DevTools & Performance Profiler** to compare improvements.
+  
+## Normal Hydration (Unoptimized) – The Performance Bottleneck
+![image](https://github.com/user-attachments/assets/52585c96-246a-4e04-930c-9239f44577df)
+
+
+**INP Value**: 24,179ms🚨(Extremely poor)
+
+
+## Hydration with Browser Scheduling API (Optimized) – The Game Changer
+
+![image](https://github.com/user-attachments/assets/2874aed2-a213-4970-97e0-6c5f7a9559c2)
+
+
+**INP Value**: 62ms ✅ (Ultra-fast)
+
 
 ## References
 This project was inspired by insights from:
